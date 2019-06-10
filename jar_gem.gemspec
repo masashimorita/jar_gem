@@ -28,6 +28,6 @@ Gem::Specification.new do |gem|
 
   # jar dependencies
   gem.add_runtime_dependency 'jar-dependencies', "~> 0.3.0"
-  gem.requirements << "jar org.apache.poi, poi, 4.0.1"
-  gem.requirements << "jar org.apache.poi, poi-ooxml, 4.0.1"
+  gem.requirements << "jar org.apache.poi:poi, 4.0.1"
+  gem.requirements << "jar org.apache.poi:poi-ooxml, 4.0.1"
 end
