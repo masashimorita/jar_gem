@@ -12,5 +12,4 @@
 /vendor/
 /.idea/
 *.jar
-*_jars.rb
 *.lock
