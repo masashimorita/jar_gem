@@ -21,12 +21,12 @@ Gem::Specification.new do |gem|
   gem.platform = 'java'
   gem.require_paths = ["lib"]
 
-  # jar dependencies
-  # gem.requirements << "jar org.apache.poi, poi, 4.0.1"
-  # gem.requirements << "jar org.apache.poi, poi-ooxml, 4.0.1"
-
-  gem.add_runtime_dependency 'jar-dependencies', "~> 0.3.0"
   gem.add_development_dependency "bundler", "~> 1.17"
   gem.add_development_dependency "rake", "~> 10.0"
   gem.add_development_dependency "rspec", "~> 3.0"
+
+  # jar dependencies
+  gem.requirements << "jar org.apache.poi, poi, 4.0.1"
+  gem.requirements << "jar org.apache.poi, poi-ooxml, 4.0.1"
+  gem.add_runtime_dependency 'jar-dependencies', "~> 0.3.0"
 end
