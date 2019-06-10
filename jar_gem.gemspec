@@ -13,11 +13,10 @@ Gem::Specification.new do |gem|
   gem.description   = "sample jar gem"
   gem.license       = "MIT"
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  gem.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
+  gem.files = Dir[ 'lib/**/*.rb' ]
+  gem.files += Dir[ 'lib/*.jar' ]
+  gem.files += Dir[ '*file' ]
+  gem.files += Dir[ '*.gemspec' ]
 
   gem.platform = 'java'
   gem.require_paths = ["lib"]
