@@ -1,4 +1,5 @@
-require 'java/load_jar'
+require 'java'
+require 'jbundler'
 require 'jar_gem/excel_reader'
 
 module JarGem

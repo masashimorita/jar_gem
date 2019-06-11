@@ -28,6 +28,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "bundler", "~> 1.17"
   gem.add_development_dependency "rake", "~> 10.0"
   gem.add_development_dependency "rspec", "~> 3.0"
+  gem.add_development_dependency "jbundler"
 
   # jar dependencies
   gem.add_runtime_dependency 'jar-dependencies'

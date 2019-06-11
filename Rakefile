@@ -1,11 +1,13 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
-require 'jars/installer'
-task :install_jars do
-  Jars::Installer.vendor_jars!
+task :precompile do
+  require 'jbundler'
+  config = JBundler::Config.new
+  JBundler::LockDown.new( config ).lock_down
+  JBundler::LockDown.new( config ).lock_down("--vendor")
 end
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :default => [:spec, :install_jars]
+task :default => [:spec, :precompile]
