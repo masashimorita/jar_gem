@@ -20,7 +20,7 @@ spec = Gem::Specification.new do |gem|
   gem.files += Dir[ '*.gemspec' ]
 
   gem.platform = 'java'
-  gem.require_paths = ["lib"]
+  # gem.require_paths = ["lib"]
 
   gem.add_development_dependency 'ruby-maven', '~> 3.3', '>= 3.3.8'
   gem.add_development_dependency "bundler", "~> 1.17"
