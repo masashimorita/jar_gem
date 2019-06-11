@@ -4,7 +4,7 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "jar_gem/version"
 
-spec = Gem::Specification.new do |gem|
+Gem::Specification.new do |gem|
   gem.name          = "jar_gem"
   gem.version       = JarGem::VERSION
   gem.authors       = ["Masashi Morita"]
@@ -13,6 +13,8 @@ spec = Gem::Specification.new do |gem|
   gem.summary       = "sample jar gem"
   gem.description   = "sample jar gem"
   gem.license       = "MIT"
+  gem.required_ruby_version     = '>= 1.9.3'
+  gem.required_rubygems_version = '>= 2.4.8'
 
   gem.files = Dir[ 'lib/**/*.rb' ]
   gem.files += Dir[ 'lib/*.jar' ]
@@ -20,7 +22,7 @@ spec = Gem::Specification.new do |gem|
   gem.files += Dir[ '*.gemspec' ]
 
   gem.platform = 'java'
-  # gem.require_paths = ["lib"]
+  gem.require_paths = ["lib"]
 
   gem.add_development_dependency 'ruby-maven', '~> 3.3', '>= 3.3.8'
   gem.add_development_dependency "bundler", "~> 1.17"
@@ -29,8 +31,4 @@ spec = Gem::Specification.new do |gem|
 
   # jar dependencies
   gem.add_runtime_dependency 'jar-dependencies'
-  gem.requirements << 'jar org.apache.poi, poi, 4.0.1'
-  gem.requirements << 'jar org.apache.poi, poi-ooxml, 4.0.1'
 end
-puts "GEM PATH: #{spec.gem_dir}"
-spec

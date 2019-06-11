@@ -11,7 +11,5 @@
 .rspec_status
 /vendor/
 /.idea/
-*.jar
-*_jars.rb
 Gemfile.lock
 *.gem
