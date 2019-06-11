@@ -44,7 +44,7 @@ class ExcelReader
         row = sheet.getRow(i)
         next unless row.present?
 
-        input = Input.new
+        input = {}
         mapping.each do |key, option|
           raise "無効なExcelマッピング設定が与えられました" unless option && option.has_key?("index")
           value = get_cell_value(row.getCell(option["index"].to_i))
