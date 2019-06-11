@@ -36,5 +36,5 @@ end
 
 if $0 == __FILE__
   Gem::Builder.new(spec).build
-  spec
 end
+spec
