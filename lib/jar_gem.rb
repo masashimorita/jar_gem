@@ -1,5 +1,5 @@
-require_relative './jar_gem_jars'
-require_relative './jar_gem/excel_reader'
+require 'jar_gem_jars'
+require 'jar_gem/excel_reader'
 
 module JarGem
   class Error < StandardError; end

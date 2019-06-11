@@ -2,7 +2,7 @@
 # require "rubygems"
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require_relative "./lib/jar_gem/version"
+require "jar_gem/version"
 
 spec = Gem::Specification.new do |gem|
   gem.name          = "jar_gem"
@@ -32,4 +32,5 @@ spec = Gem::Specification.new do |gem|
   gem.requirements << 'jar org.apache.poi, poi, 4.0.1'
   gem.requirements << 'jar org.apache.poi, poi-ooxml, 4.0.1'
 end
+puts "GEM PATH: #{spec.gem_dir}"
 spec
