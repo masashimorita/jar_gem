@@ -35,6 +35,7 @@ end
 
 
 if $0 == __FILE__
-  Gem::Builder.new(spec).build
+  require 'jars/installer'
+  Jars::Installer.vendor_jars!
 end
 spec
