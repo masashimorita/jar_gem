@@ -1,5 +1,4 @@
-require "jar_gem/version"
-require "jar_gem_jars"
+require_relative './jar_gem_jars'
 
 module JarGem
   class Error < StandardError; end
