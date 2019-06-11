@@ -3,7 +3,7 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require_relative "./lib/jar_gem/version"
 
-Gem::Specification.new do |gem|
+spec = Gem::Specification.new do |gem|
   gem.name          = "jar_gem"
   gem.version       = JarGem::VERSION
   gem.authors       = ["Masashi Morita"]
@@ -33,6 +33,6 @@ Gem::Specification.new do |gem|
 end
 
 
-# if $0 == __FILE__
-#   Gem::Builder.new(spec).build
-# end
+if $0 == __FILE__
+  Gem::Builder.new(spec).build
+end
