@@ -34,6 +34,7 @@ spec = Gem::Specification.new do |gem|
 end
 
 
-if $0 == __FILE__
-  Gem::Builder.new(spec).build
-end
+# if $0 == __FILE__
+#   Gem::Builder.new(spec).build
+# end
+puts spec
