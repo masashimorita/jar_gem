@@ -29,13 +29,7 @@ spec = Gem::Specification.new do |gem|
 
   # jar dependencies
   gem.add_runtime_dependency 'jar-dependencies'
-  gem.requirements << 'jar org.apache.poi:poi, 4.0.1'
-  gem.requirements << 'jar org.apache.poi:poi-ooxml, 4.0.1'
-end
-
-
-if $0 == __FILE__
-  require 'jars/installer'
-  Jars::Installer.vendor_jars!
+  gem.requirements << 'jar org.apache.poi, poi, 4.0.1'
+  gem.requirements << 'jar org.apache.poi, poi-ooxml, 4.0.1'
 end
 spec
